@@ -11,7 +11,7 @@ namespace controleContas.Model
 
         public Cliente(string email, int anoNascimento, string nome, string cpf)
         {
-            if (cpf == null || cpf.Length == 10) throw new Exception("Erro: favor inserir um cpf válido");
+            if (cpf == null || cpf.Length != 11) throw new Exception("Erro: favor inserir um cpf válido");
             this.email = email;
             this.anoNascimento = anoNascimento;
             this.nome = nome;
